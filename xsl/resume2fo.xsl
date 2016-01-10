@@ -60,31 +60,31 @@
     </root>
   </xsl:template>
 
-	<xsl:template match="resume:Achievements">
-		<block margin-bottom="25pt">
-			<xsl:call-template name="getTitleBlock">
-				<xsl:with-param name="title" select="string('Achievements')" />
-			</xsl:call-template>
-			<block font-size="90%" line-height="150%" margin-bottom="10pt" margin-left="20pt">
-				<list-block>
-					<xsl:for-each select="resume:Achievement">
-						<list-item>
-							<list-item-label>
-								<block font-size="150%">&#x2022;</block>
-							</list-item-label>
-							<list-item-body>
-								<block margin-left="10pt">
-									<xsl:value-of select="resume:Date/resume:Year | resume:Date/resume:StringDate" />
-									<xsl:text>,&#x20;</xsl:text>
-									<xsl:value-of select="resume:Description" />
-								</block>
-							</list-item-body>
-						</list-item>
-					</xsl:for-each>
-				</list-block>
-			</block>
-		</block>
-	</xsl:template>
+  <xsl:template match="resume:Achievements">
+    <block margin-bottom="25pt">
+      <xsl:call-template name="getTitleBlock">
+        <xsl:with-param name="title" select="string('Achievements')" />
+      </xsl:call-template>
+      <block font-size="90%" line-height="150%" margin-bottom="10pt" margin-left="20pt">
+        <list-block>
+          <xsl:for-each select="resume:Achievement">
+            <list-item>
+              <list-item-label>
+                <block font-size="150%">&#x2022;</block>
+              </list-item-label>
+              <list-item-body>
+                <block margin-left="10pt">
+                  <xsl:value-of select="resume:Date/resume:Year | resume:Date/resume:StringDate" />
+                  <xsl:text>,&#x20;</xsl:text>
+                  <xsl:value-of select="resume:Description" />
+                </block>
+              </list-item-body>
+            </list-item>
+          </xsl:for-each>
+        </list-block>
+      </block>
+    </block>
+  </xsl:template>
 
   <xsl:template match="resume:Associations">
     <block margin-bottom="25pt">
@@ -487,30 +487,30 @@
     </block>
   </xsl:template>
 
-	<xsl:template match="resume:ResumeAdditionalItems">
-		<block margin-bottom="25pt">
-			<xsl:call-template name="getTitleBlock">
-				<xsl:with-param name="title" select="string('Additional Items')" />
-			</xsl:call-template>
-			<block font-size="90%" line-height="150%" margin-bottom="10pt" margin-left="20pt"
-				keep-with-previous="always">
-				<list-block>
-					<xsl:for-each select="resume:ResumeAdditionalItem">
-						<list-item>
-							<list-item-label>
-								<block font-size="150%">&#x2022;</block>
-							</list-item-label>
-							<list-item-body>
-								<block margin-left="10pt">
-									<xsl:value-of select="resume:Description" />
-								</block>
-							</list-item-body>
-						</list-item>
-					</xsl:for-each>
-				</list-block>
-			</block>
-		</block>
-	</xsl:template>
+  <xsl:template match="resume:ResumeAdditionalItems">
+    <block margin-bottom="25pt">
+      <xsl:call-template name="getTitleBlock">
+        <xsl:with-param name="title" select="string('Additional Items')" />
+      </xsl:call-template>
+      <block font-size="90%" line-height="150%" margin-bottom="10pt" margin-left="20pt"
+        keep-with-previous="always">
+        <list-block>
+          <xsl:for-each select="resume:ResumeAdditionalItem">
+            <list-item>
+              <list-item-label>
+                <block font-size="150%">&#x2022;</block>
+              </list-item-label>
+              <list-item-body>
+                <block margin-left="10pt">
+                  <xsl:value-of select="resume:Description" />
+                </block>
+              </list-item-body>
+            </list-item>
+          </xsl:for-each>
+        </list-block>
+      </block>
+    </block>
+  </xsl:template>
 
   <xsl:template match="resume:Role">
     <xsl:value-of select="resume:Name" />

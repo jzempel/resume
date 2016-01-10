@@ -34,22 +34,22 @@
     </html>
   </xsl:template>
 
-	<xsl:template match="resume:Achievements">
-		<div class="section">
-			<p class="sectionTitle">Achievements</p>
-			<div class="subSection">
-				<ul>
-					<xsl:for-each select="resume:Achievement">
-						<li>
-							<xsl:value-of select="resume:Date/resume:Year | resume:Date/resume:StringDate" />
-							<xsl:text>,&#x20;</xsl:text>
-							<xsl:value-of select="resume:Description" />
-						</li>
-					</xsl:for-each>
-				</ul>
-			</div>
-		</div>
-	</xsl:template>
+  <xsl:template match="resume:Achievements">
+    <div class="section">
+      <p class="sectionTitle">Achievements</p>
+      <div class="subSection">
+        <ul>
+          <xsl:for-each select="resume:Achievement">
+            <li>
+              <xsl:value-of select="resume:Date/resume:Year | resume:Date/resume:StringDate" />
+              <xsl:text>,&#x20;</xsl:text>
+              <xsl:value-of select="resume:Description" />
+            </li>
+          </xsl:for-each>
+        </ul>
+      </div>
+    </div>
+  </xsl:template>
 
   <xsl:template match="resume:Associations">
     <div class="section">
@@ -334,20 +334,20 @@
     </div>
   </xsl:template>
 
-	<xsl:template match="resume:ResumeAdditionalItems">
-		<div class="section">
-			<p class="sectionTitle">Additional Items</p>
-			<div class="subSection">
-				<ul>
-					<xsl:for-each select="resume:ResumeAdditionalItem">
-						<li>
-							<xsl:value-of select="resume:Description" />
-						</li>
-					</xsl:for-each>
-				</ul>
-			</div>
-		</div>
-	</xsl:template>
+  <xsl:template match="resume:ResumeAdditionalItems">
+    <div class="section">
+      <p class="sectionTitle">Additional Items</p>
+      <div class="subSection">
+        <ul>
+          <xsl:for-each select="resume:ResumeAdditionalItem">
+            <li>
+              <xsl:value-of select="resume:Description" />
+            </li>
+          </xsl:for-each>
+        </ul>
+      </div>
+    </div>
+  </xsl:template>
 
   <xsl:template match="resume:Role">
     <xsl:value-of select="resume:Name" />
