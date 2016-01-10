@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resume xmlns="http://ns.hr-xml.org/2007-04-15"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://ns.hr-xml.org/2007-04-15 https://s3.amazonaws.com/Build_2_5/HR-XML-2_5/SEP/Resume.xsd">
+  <StructuredXMLResume>
+    <ContactInfo>
+      <PersonName>
+        <GivenName>First</GivenName>
+        <FamilyName>Last</FamilyName>
+      </PersonName>
+      <ContactMethod>
+        <Telephone>
+          <FormattedNumber>000.000.0000</FormattedNumber>
+        </Telephone>
+        <InternetEmailAddress>email@gmail.com</InternetEmailAddress>
+          <InternetWebAddress>http://j.mp/first-last</InternetWebAddress>
+        <PostalAddress>
+          <CountryCode>US</CountryCode>
+          <PostalCode>00000</PostalCode>
+          <Region>ST</Region>
+          <Municipality>City</Municipality>
+          <DeliveryAddress>
+            <AddressLine>1234 Address</AddressLine>
+          </DeliveryAddress>
+        </PostalAddress>
+      </ContactMethod>
+    </ContactInfo>
+
+    <ExecutiveSummary>
+      Summary...
+    </ExecutiveSummary>
+
+    <Objective>
+      Objective
+    </Objective>
+
+    <EmploymentHistory>
+      <EmployerOrg>
+        <EmployerOrgName>Company, Inc.</EmployerOrgName>
+        <EmployerContactInfo>
+          <ContactMethod>
+            <PostalAddress>
+              <CountryCode>US</CountryCode>
+              <PostalCode>00000</PostalCode>
+              <Region>ST</Region>
+              <Municipality>City</Municipality>
+              <DeliveryAddress>
+                <AddressLine>1234 Address</AddressLine>
+              </DeliveryAddress>
+            </PostalAddress>
+          </ContactMethod>
+        </EmployerContactInfo>
+        <PositionHistory>
+          <Title>Title</Title>
+          <OrgName>
+            <OrganizationName />
+          </OrgName>
+          <Description>
+            Description
+          </Description>
+          <StartDate>
+            <YearMonth>2000-00</YearMonth>
+          </StartDate>
+          <Competency
+              description="Description..." />
+          <Competency
+              description="Description..." />
+        </PositionHistory>
+      </EmployerOrg>
+    </EmploymentHistory>
+
+    <EducationHistory>
+      <SchoolOrInstitution schoolType="University">
+        <SchoolName>School</SchoolName>
+        <Degree degreeType="bachelors">
+          <DegreeName>Bachelors of ???</DegreeName>
+          <DegreeDate>
+            <Year>2000</Year>
+          </DegreeDate>
+          <DegreeMajor>
+            <Name>Major</Name>
+          </DegreeMajor>
+          <DegreeMinor>
+            <Name>Minor</Name>
+          </DegreeMinor>
+          <DegreeMeasure>
+            <EducationalMeasure>
+              <MeasureSystem>GPA</MeasureSystem>
+              <MeasureValue>
+                <NumericValue>3.0</NumericValue>
+              </MeasureValue>
+            </EducationalMeasure>
+          </DegreeMeasure>
+        </Degree>
+        <Comments>Comments</Comments>
+      </SchoolOrInstitution>
+    </EducationHistory>
+
+    <PatentHistory>
+      <Patent>
+        <PatentTitle>
+          Title
+        </PatentTitle>
+        <Description>
+          Description
+        </Description>
+        <Inventors>
+          <InventorName>Name1</InventorName>
+          <InventorName>Name2</InventorName>
+        </Inventors>
+        <PatentDetail>
+          <IssuingAuthority countryCode="US">
+            US Patent and Trademark Office
+          </IssuingAuthority>
+          <PatentMilestone>
+            <Id>0123456789</Id>
+            <Status>PatentPending</Status>
+            <Date>2000-00-00</Date>
+          </PatentMilestone>
+          <PatentMilestone>
+            <Id>10-1234567</Id>
+            <Status>PatentFiled</Status>
+            <Date>2000-00-00</Date>
+          </PatentMilestone>
+        </PatentDetail>
+        <Link>http://www.delphion.com/details?pn=US012345789</Link>
+      </Patent>
+    </PatentHistory>
+
+    <PublicationHistory>
+      <OtherPublication>
+        <Title>Title</Title>
+        <Name role="contributor" />
+        <PublicationDate>
+          <AnyDate>2000-00-00</AnyDate>
+        </PublicationDate>
+        <Link>http://www.google.com</Link>
+        <Comments>
+          Comments
+        </Comments>
+      </OtherPublication>
+    </PublicationHistory>
+
+    <Qualifications>
+      <Competency name="Category">
+        <Competency name="competency" />
+        <Competency name="competency" />
+      </Competency>
+      <Competency name="Category">
+        <Competency name="competency" />
+        <Competency name="competency" />
+      </Competency>
+    </Qualifications>
+
+    <Achievements>
+      <Achievement>
+        <Date>
+          <Year>2000</Year>
+        </Date>
+        <Description>
+          Achievement
+        </Description>
+      </Achievement>
+      <Achievement>
+        <Date>
+          <Year>2000</Year>
+        </Date>
+        <Description>
+          Achievement
+        </Description>
+      </Achievement>
+    </Achievements>
+
+    <Associations>
+      <Association type="Professional">
+        <Name>Name</Name>
+        <Link>http://www.google.com</Link>
+        <StartDate>
+          <YearMonth>2000-00</YearMonth>
+        </StartDate>
+        <EndDate>
+          <YearMonth>2000-00</YearMonth>
+        </EndDate>
+        <Role>
+          <Name>Role Name</Name>
+          <Deliverable>Deliverable</Deliverable>
+        </Role>
+        <Comments>
+          Comments
+        </Comments>
+      </Association>
+    </Associations>
+
+    <ResumeAdditionalItems>
+      <ResumeAdditionalItem>
+        <Description>
+          One
+        </Description>
+      </ResumeAdditionalItem>
+      <ResumeAdditionalItem>
+        <Description>
+          Two
+        </Description>
+      </ResumeAdditionalItem>
+    </ResumeAdditionalItems>
+
+    <RevisionDate>2016-01-10</RevisionDate>
+  </StructuredXMLResume>
+</Resume>

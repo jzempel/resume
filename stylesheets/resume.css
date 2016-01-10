@@ -1,0 +1,134 @@
+a
+{
+  color: #00458B;
+  text-decoration: none;
+}
+
+a:hover
+{
+  text-decoration: underline;
+}
+
+body
+{
+  background: #000;
+  color: #222;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: .9em;
+  line-height: 150%;
+  margin: 0px;
+}
+
+div.content
+{
+  background: white;
+  margin-bottom: 2.5em;
+  margin-left: 2.5em;
+  margin-right: 2.5em;
+  margin-top: 2em;
+  padding-bottom: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 2em;
+}
+
+div.resume
+{
+  margin-left: 15em;
+  padding-top: .5em;
+}
+
+div.section
+{
+  margin-bottom: 2.5em;
+}
+
+div.sidebar
+{
+  color: #666666;
+  padding-top: 1em;
+  position: absolute;
+  text-align: center;
+  width: 12em;
+}
+
+div.sidebarSection
+{
+  border-top: 1px solid #282828;
+  line-height: 150%;
+  margin-bottom: 1em;
+  padding-top: 1em;
+}
+
+div.subSection
+{
+  font-size: 90%;
+  margin-bottom: 2em;
+  margin-left: 2em;
+}
+
+div.subSubSection
+{
+  margin-left: 2em;
+}
+
+p
+{
+  margin: 0px;
+}
+
+p.personName
+{
+  font-weight: bold;
+  letter-spacing: .1em;
+}
+
+p.sectionTitle
+{
+  color: #666666;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+
+p.subSectionSubTitle
+{
+  font-style: italic;
+  margin-bottom: .5em;
+  position: relative;
+  top: -.5em;
+}
+
+p.subSectionTitle
+{
+  color: #666666;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+span.competency
+{
+  font-style: italic;
+  word-spacing: normal;
+}
+
+span.subTitleHighlight
+{
+  color: #333333;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+ul
+{
+  line-height: 150%;
+  list-style-type: square;
+  margin: 0px;
+  margin-left: 1.25em;
+  padding: 0px;
+}
+
+ul.competencies
+{
+  margin-top: 1em;
+  padding-left: 2em;
+}

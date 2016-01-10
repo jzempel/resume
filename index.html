@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>First Last's Resume</title>
+<meta charset="utf-8" />
+<script>
+function getUrl(path)
+{
+  var index = location.href.lastIndexOf('/');
+  var url = location.href.substring(0, index);
+
+  return url + '/' + path;
+}
+
+function getXmlDocument(url)
+{
+  var retVal = null;
+
+  if (window.ActiveXObject)
+  {
+    retVal = new ActiveXObject("Msxml2.FreeThreadedDOMDocument");
+    retVal.preserveWhiteSpace = true;
+    retVal.async = false;
+    retVal.load(url);
+  }
+  else
+  {
+    var xmlHttpRequest = new XMLHttpRequest();
+
+    xmlHttpRequest.open("get", url, false /*asynchronous*/);
+    xmlHttpRequest.overrideMimeType("text/xml");
+    xmlHttpRequest.send(null);
+
+    if (xmlHttpRequest.status == 200)
+    {
+      retVal = xmlHttpRequest.responseXML;
+    }
+  }
+
+  return retVal;
+}
+
+function load()
+{
+  var xmlUrl = "resume.xml";
+  var xslUrl = "xsl/resume2html.xsl";
+  var xslFile = getUrl("xsl/resume2txt.xsl");
+  var xmlFile = getUrl(xmlUrl);
+  var links = "First Last.pdf,PDF Resume;" +
+              "http://services.w3.org/xslt?xslfile=" + encodeURIComponent(xslFile) + "&xmlfile=" + encodeURIComponent(xmlFile) + "&content-type=text%2Fplain,Text Resume;";
+  var html = transform(xmlUrl, xslUrl, links);
+
+  if (html != null)
+  {
+    document.open();
+    document.write(html);
+    document.close();
+  }
+  else
+  {
+    location.replace("First Last.pdf");
+  }
+}
+
+function transform(xmlUrl, xslUrl, links)
+{
+  var retVal = null;
+  var xmlDocument = getXmlDocument(xmlUrl);
+  var xslDocument = getXmlDocument(xslUrl);
+
+  if (xmlDocument != null && xslDocument != null)
+  {
+    if (window.ActiveXObject)
+    {
+      var xslTemplate = new ActiveXObject("MSXML2.XSLTemplate");
+
+      xslTemplate.stylesheet = xslDocument;
+
+      var xsltProcessor = xslTemplate.createProcessor();
+
+      if (links != null)
+      {
+        xsltProcessor.addParameter("myLinks", links);
+      }
+
+      xsltProcessor.input = xmlDocument;
+      xsltProcessor.transform();
+      retVal = xsltProcessor.output;
+    }
+    else if (typeof XSLTProcessor != "undefined")
+    {
+      var xsltProcessor = new XSLTProcessor();
+
+      if (links != null)
+      {
+        xsltProcessor.setParameter(null /*namespace*/, "myLinks", links);
+      }
+
+      xsltProcessor.importStylesheet(xslDocument);
+
+      var transformXml = xsltProcessor.transformToDocument(xmlDocument);
+      var xmlSerializer = new XMLSerializer();
+
+      retVal = xmlSerializer.serializeToString(transformXml);
+    }
+  }
+
+  return retVal;
+}
+</script>
+</head>
+<body onload="load()">
+</body>
+</html>
