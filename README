@@ -1,2 +1,8 @@
 Generate PDF:
 fop -xml resume.xml -xsl xsl/resume2fo.xsl -pdf "First Last.pdf"
+
+HR-XML Documentation:
+http://hr-xsl.sourceforge.net/doc/index.html
+
+HR-XML XSD:
+https://s3.amazonaws.com/Build_2_5/HR-XML-2_5/SEP/Resume.xsd
